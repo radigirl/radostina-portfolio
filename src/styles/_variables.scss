@@ -1,0 +1,54 @@
+// Fonts
+$font-primary: 'Inter', sans-serif;
+$font-heading: 'Manrope', sans-serif;
+
+// Spacing
+$space-1: 8px;
+$space-2: 12px;
+$space-3: 16px;
+$space-4: 24px;
+$space-5: 32px;
+$space-6: 48px;
+$space-7: 64px;
+
+// Radius
+$radius-sm: 12px;
+$radius-md: 20px;
+$radius-lg: 28px;
+$radius-xl: 40px;
+
+// Shadows
+$shadow-soft: 0 10px 30px rgba(85, 97, 109, 0.08);
+$shadow-card: 0 16px 40px rgba(85, 97, 109, 0.12);
+
+// Base colors
+$color-heading: #55616d;
+$color-text: #6c7a89;
+$color-text-soft: #7f8a96;
+$color-text-muted: rgba(108, 122, 137, 0.66);
+
+$color-border: rgba(108, 122, 137, 0.16);
+$color-surface: #ffffff;
+
+// Orange system
+$color-orange: #f26b3a;
+$color-orange-light: #ff8f5a;
+$color-cream: #fff0e6;
+$color-cream-strong: #ffe7d7;
+
+// Accent neutrals
+$color-slate: #6c7a89;
+$color-dark: #55616d;
+
+// Backward-compatible aliases
+$color-muted: $color-text;
+$color-text-strong: $color-heading;
+
+// Background gradients
+$bg-home: linear-gradient(
+  180deg,
+  #f7a07a 0%,
+  #f5c4aa 40%,
+  #fff0e6 100%
+);
+$bg-neutral: linear-gradient(180deg, #fffdfb 0%, #fff8f2 100%);

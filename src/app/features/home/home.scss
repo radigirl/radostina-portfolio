@@ -1,0 +1,349 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/breakpoints' as *;
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 0 52px;
+  background:
+    radial-gradient(circle at 20% 28%, rgba(255, 255, 255, 0.22), transparent 38%),
+    radial-gradient(circle at 78% 68%, rgba(242, 107, 58, 0.1), transparent 42%),
+    $bg-home;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 28px;
+}
+
+.hero__text {
+  max-width: 38rem;
+}
+
+.hero__name {
+  margin: 0 0 4px;
+  color: $color-heading;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.hero__role {
+  margin: 0 0 18px;
+  color: $color-text;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.hero__title {
+  margin: 0 0 18px;
+  max-width: 14ch;
+  font-family: $font-heading;
+  font-size: 2.35rem;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: $color-heading;
+}
+
+.hero__description {
+  margin: 0;
+  max-width: 32rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: $color-text;
+}
+
+.hero__description:first-of-type {
+  font-weight: 500;
+  color: $color-heading;
+}
+
+.hero__description--secondary {
+  margin-top: 10px;
+  color: $color-text-soft;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hero__button--primary {
+  background: rgba(255, 240, 230, 0.95);
+  color: $color-heading;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 24px rgba(85, 97, 109, 0.12);
+}
+
+.hero__button--primary:hover {
+  background: $color-cream-strong;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(85, 97, 109, 0.14);
+}
+
+.hero__button--secondary {
+  background: rgba(255, 255, 255, 0.22);
+  color: $color-heading;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.hero__button--secondary:hover {
+  background: rgba(255, 255, 255, 0.32);
+  transform: translateY(-1px);
+}
+
+/* RIGHT SIDE */
+
+.hero__projects {
+  display: grid;
+  gap: 18px;
+}
+
+/* FEATURED CARD */
+
+.hero__card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 28px;
+  overflow: hidden;
+   background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.85),
+    rgba(255,255,255,0.75)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.06),
+    0 1px 0 rgba(255, 255, 255, 0.4) inset;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero__card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 28px 64px rgba(85, 97, 109, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+.hero__card-content {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+}
+
+.hero__card-label {
+  margin: 0 0 12px;
+  color: $color-slate;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero__card-title {
+  margin: 0 0 12px;
+  font-family: $font-heading;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $color-heading;
+}
+
+.hero__card-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: $color-heading;
+}
+
+.hero__card-subtitle {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #7d7d7d;
+}
+
+.hero__card-glow {
+  position: absolute;
+  right: -44px;
+  bottom: -54px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+      rgba(242, 107, 58, 0.16) 0%,
+      rgba(242, 107, 58, 0) 72%);
+}
+
+.hero__card--featured {
+  margin-bottom: 18px;
+}
+
+/* SECONDARY CARDS */
+
+.hero__project-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.hero__mini-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255, 248, 242, 0.82);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 18px 42px rgba(85, 97, 109, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero__mini-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 52px rgba(85, 97, 109, 0.14);
+}
+
+.hero__mini-content {
+  padding: 16px 18px 18px;
+}
+
+.hero__mini-label {
+  margin: 0 0 6px;
+  color: $color-text-soft;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero__mini-title {
+  margin: 0 0 8px;
+  font-family: $font-heading;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: $color-heading;
+}
+
+.hero__mini-text {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: $color-text;
+}
+
+/* BACKGROUND BLOBS */
+
+.hero__bg {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+.hero__bg--1 {
+  top: 60px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.hero__bg--2 {
+  bottom: 60px;
+  left: -100px;
+  width: 220px;
+  height: 220px;
+  background: rgba(255, 214, 192, 0.22);
+}
+
+.hero__bg--3 {
+  top: 50%;
+  right: 20%;
+  width: 140px;
+  height: 140px;
+  background: rgba(242, 107, 58, 0.12);
+}
+
+/* RESPONSIVE */
+
+@include tablet-up {
+  .hero {
+    padding: 56px 0 72px;
+  }
+
+  .hero__content {
+    gap: 32px;
+  }
+
+  .hero__title {
+    font-size: 2.9rem;
+  }
+
+  .hero__project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include desktop-up {
+  .hero__content {
+    grid-template-columns: 1fr 440px;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .hero__title {
+    font-size: 3.2rem;
+    max-width: 11.5ch;
+  }
+
+  .hero__projects {
+    gap: 16px;
+  }
+
+  .hero__project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include desktop-xl {
+  .hero__content {
+    grid-template-columns: 1fr 470px;
+    gap: 40px;
+  }
+
+  .hero__title {
+    font-size: 3.45rem;
+  }
+
+  .hero__description {
+    max-width: 33rem;
+    font-size: 1.08rem;
+  }
+}

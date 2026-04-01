@@ -1,0 +1,36 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+
+@mixin container {
+  width: min(1200px, calc(100% - 32px));
+  margin-inline: auto;
+
+  @include tablet-up {
+    width: min(1200px, calc(100% - 48px));
+  }
+}
+
+@mixin section {
+  padding-block: 64px;
+
+  @include tablet-up {
+    padding-block: 88px;
+  }
+
+  @include desktop-up {
+    padding-block: 112px;
+  }
+}
+
+@mixin card {
+  background: $color-surface;
+  border-radius: $radius-lg;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-soft;
+}
+
+@mixin glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
