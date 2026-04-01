@@ -1,0 +1,186 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/breakpoints' as *;
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fffdfb 0%, #fff8f2 100%);
+  color: $color-text;
+}
+
+.project-top {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(255, 253, 251, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(108, 122, 137, 0.12);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 32px 20px 0;
+  width: fit-content;
+  text-decoration: none;
+  color: $color-text;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-link:hover {
+  color: $color-heading;
+  transform: translateX(-1px);
+}
+
+.project-hero {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 24px 20px 20px;
+}
+
+.project-title {
+  margin: 0 0 12px;
+  font-family: $font-heading;
+  font-size: 2.4rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: $color-heading;
+}
+
+.project-subtitle {
+  margin: 0;
+  max-width: 48rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: $color-text;
+}
+
+.project-tabs {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  padding: 14px 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.project-tabs button {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(108, 122, 137, 0.12);
+  background: rgba(255, 255, 255, 0.65);
+  color: $color-text;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.project-tabs button:hover {
+  color: $color-heading;
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
+
+.project-section {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 48px 20px;
+  scroll-margin-top: 220px;
+  border-bottom: 1px solid rgba(108, 122, 137, 0.1);
+}
+
+.project-section:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 80px;
+}
+
+.project-section h2 {
+  margin: 0 0 12px;
+  font-family: $font-heading;
+  font-size: 1.7rem;
+  line-height: 1.1;
+  color: $color-heading;
+}
+
+.project-section p {
+  margin: 0;
+  max-width: 52rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: $color-text;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@include tablet-up {
+  .back-link {
+    margin: 36px 24px 0;
+    font-size: 1rem;
+  }
+
+  .project-hero {
+    padding: 32px 24px 24px;
+  }
+
+  .project-title {
+    font-size: 3rem;
+  }
+
+  .project-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .project-tabs {
+    padding: 16px 24px;
+  }
+
+  .project-section {
+    padding: 56px 24px;
+  }
+
+  .project-section h2 {
+    font-size: 1.9rem;
+  }
+}
+
+@include desktop-up {
+  .back-link {
+    width: min(100%, 1100px);
+    display: flex;
+    margin: 40px auto 0;
+    padding: 0 24px;
+  }
+
+  .project-hero {
+    padding: 28px 24px 24px;
+  }
+
+  .project-title {
+    font-size: 3.4rem;
+  }
+
+  .project-tabs {
+    overflow-x: visible;
+  }
+}
