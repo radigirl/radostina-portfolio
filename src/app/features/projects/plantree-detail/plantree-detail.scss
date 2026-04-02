@@ -177,6 +177,11 @@
   justify-items: center;
 }
 
+.overview-images {
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
 .planning-images img,
 .planning-images img {
   width: 100%;
@@ -189,6 +194,7 @@
 
 .overview-images img {
   max-width: 300px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 }
 
 
@@ -271,6 +277,6 @@
   }
 
   .overview-images {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1.2fr 0.8fr;
   }
 }
