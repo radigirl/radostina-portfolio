@@ -134,11 +134,9 @@
   color: inherit;
   border-radius: 28px;
   overflow: hidden;
-   background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.85),
-    rgba(255,255,255,0.75)
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.75));
   border: 1px solid rgba(255, 255, 255, 0.55);
   box-shadow:
     0 8px 24px rgba(0, 0, 0, 0.06),
@@ -345,5 +343,26 @@
   .hero__description {
     max-width: 33rem;
     font-size: 1.08rem;
+  }
+}
+
+@include tablet-narrow {
+  .hero__content {
+    gap: 24px;
+  }
+
+  .hero__text,
+  .hero__projects {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero__project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__card,
+  .hero__mini-card {
+    width: 100%;
   }
 }

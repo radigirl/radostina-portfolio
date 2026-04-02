@@ -6,6 +6,7 @@ $bp-mobile-sm: 360px;
 $bp-mobile: 767px;
 
 $bp-tablet: 768px;
+$bp-tablet-narrow-max: 900px;
 
 $bp-desktop: 1024px;
 $bp-desktop-max: 1023px;
@@ -31,6 +32,12 @@ $bp-desktop-xl: 1440px;
 
 @mixin tablet {
   @media (min-width: $bp-tablet) and (max-width: $bp-desktop-max) {
+    @content;
+  }
+}
+
+@mixin tablet-narrow {
+  @media (min-width: $bp-tablet) and (max-width: $bp-tablet-narrow-max) {
     @content;
   }
 }
