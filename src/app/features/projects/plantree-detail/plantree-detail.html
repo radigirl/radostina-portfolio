@@ -41,14 +41,21 @@
     </p>
 
     <div class="overview-images">
-        <img src="assets/images/home.jpg" alt="Home screen with main features" />
-        <img src="assets/images/menu-open.jpg" alt="Navigation menu showing main sections" />
+        <img src="assets/images/home.png" alt="Home screen with main features" />
+        <img src="assets/images/menu-open.png" alt="Navigation menu showing main sections" />
     </div>
 
     <p>
-        The home screen provides quick access to the main areas of the product, including planning, pantry, lists, and
-        the meal library. Navigation is designed to be simple and consistent, allowing users to move easily between
-        organizing meals, managing ingredients, and making decisions.
+        The home screen acts as the central entry point into the system, connecting planning, grocery lists, pantry
+        management, meal suggestions, and household insights into a single workflow. The primary bottom navigation
+        follows the core household flow from planning, to shopping, to pantry management.
+    </p>
+
+    <p>
+        A secondary navigation menu provides access to additional areas of the product, including Cook from Pantry,
+        My Meals, Week Stats, notifications, language switching, household management, ingredient rules, spaces,
+        account actions, and system settings. Space switching is also available directly from the top bar, allowing
+        users to quickly move between different household contexts.
     </p>
 </section>
 
@@ -130,14 +137,14 @@
     <h2>Planning</h2>
 
     <p>
-        Planning in Plantree is designed as a flexible system that supports both structured weekly organization and more
-        dynamic, date-based decisions.
+        Planning in Plantree is designed as a flexible system that supports both structured weekly organization and
+        more dynamic, date-based decisions.
     </p>
 
     <p>
-        While the week view provides a clear overview, users can navigate to specific dates and adjust plans at any
-        time. Meals can be added, changed, or removed without disrupting the rest of the system, keeping planning
-        lightweight and adaptable.
+        The weekly planning view provides an overview of the household schedule while still allowing quick adjustments
+        at the day level. Past days become visually faded, helping users focus on the current and upcoming meals
+        without losing the broader context of the week.
     </p>
 
     <p>
@@ -146,75 +153,336 @@
     </p>
 
     <p>
-        Planning is directly connected to shopping. Meals added to the weekly plan can be used to generate a grocery
-        list, turning planned meals into a practical list of ingredients needed for the week.
+        Planning supports both lightweight scheduling and more detailed day-level organization. Multiple meals can be
+        grouped within the same day, allowing households to plan different meals throughout the day while keeping the
+        workflow simple and flexible.
     </p>
 
     <p>
-        Planning is also accessible through the meal library. From each saved meal, users can quickly add it to today,
-        tomorrow, or any selected date, including multiple days at once.
+        Meals can be selected from an existing shared meal library or created directly during planning, reducing
+        friction between meal creation and scheduling.
     </p>
 
     <p>
         Search is available both in the planning flow and within the meal library, allowing users to quickly find meals
-        by name or ingredients. The matching is intentionally flexible, so even imperfect queries can still surface
+        by name or ingredients. Matching is intentionally flexible, so even imperfect queries can still surface
         relevant results.
     </p>
 
     <p>
-        Date selection is handled within the meal library flow, where users can choose single or multiple days. In
-        contrast, the planning view supports navigating across days while directly adding, removing, and adjusting meals
-        for each date, including assigning responsibility where needed.
+        Planning is directly connected to shopping. Meals added to the weekly plan can later be used to generate a
+        grocery list, turning planned meals into a practical shopping workflow.
     </p>
 
     <p>
-        When adjusting a planned meal, users can replace it with another recipe from their meal library or create a new
-        one based on existing data.
+        Planned meals also support a lightweight cooking lifecycle. Meals can move through preparation states such as
+        <em>To prepare</em>, <em>In progress</em>, and <em>Ready</em>, helping households coordinate cooking activity
+        throughout the week. These states are later reused by the household insights system.
     </p>
 
     <div class="planning-images">
-        <img src="assets/images/plan-week.png" alt="Weekly planning view" />
-        <img src="assets/images/my-meals.png" alt="Meal library screen" />
-        <img src="assets/images/add-to-plan-calendar.png"
-            alt="Meal date selection with single and multiple day options" />
+        <img src="assets/images/planning-week-view.png"
+            alt="Weekly planning view with current day focus and grocery list generation" />
+
+        <img src="assets/images/planning-day-details.png" alt="Day details view with multiple planned meals" />
+
+        <img src="assets/images/planning-add-multiple-meals.png" alt="Adding multiple meals to the same day" />
+
+        <img src="assets/images/planning-my-meals-multi-day.png"
+            alt="Adding a saved meal to multiple planning days from My Meals" />
     </div>
 
     <ul class="planning-points">
         <li>
             <strong>Weekly overview with day-level control</strong><br />
-            Users can see their plan across the week while managing meals individually for each day.
+            Users can navigate across the week while managing meals individually for each day.
         </li>
 
         <li>
-            <strong>Multiple entry points</strong><br />
-            Meals can be planned directly from the calendar or added from the meal library.
+            <strong>Multiple meals per day</strong><br />
+            Days can contain several planned meals, supporting more realistic household planning.
         </li>
 
         <li>
-            <strong>Multi-day planning</strong><br />
-            Meals can be assigned to one or multiple days, supporting both quick planning and repetition.
+            <strong>Flexible meal creation</strong><br />
+            Meals can be reused from the shared library or created directly during the planning flow.
         </li>
 
         <li>
-            <strong>Lightweight interactions</strong><br />
-            Adding or adjusting meals is designed to be fast and non-disruptive.
+            <strong>Integrated shopping transition</strong><br />
+            Planned meals can later be transformed into grocery lists without duplicating work.
         </li>
 
         <li>
-            <strong>Supports real-life decisions</strong><br />
-            Planning adapts to changes, rather than enforcing a rigid structure.
+            <strong>Multi-day meal assignment</strong><br />
+            Meals from the library can be quickly scheduled across one or multiple dates.
+        </li>
+
+        <li>
+            <strong>Lightweight cooking coordination</strong><br />
+            Meal preparation states help households coordinate what is currently being prepared, cooked, or already
+            ready to serve.
+        </li>
+
+        <li>
+            <strong>Supports real-life adjustments</strong><br />
+            Planning remains flexible and easy to change without disrupting the overall workflow.
         </li>
     </ul>
 </section>
 
 <section id="lists" class="project-section">
     <h2>Lists</h2>
-    <p>Lists content goes here.</p>
+
+    <p>
+        Grocery Lists in Plantree support both manually created lists and lists generated directly from planned meals.
+        Generated lists remain fully editable after creation, allowing users to freely adjust, add, remove, and
+        organize items as needed.
+    </p>
+
+    <p>
+        Lists generated from the planning system act as snapshots of the selected meals at the time of creation. Future
+        changes to meal plans do not automatically modify already created lists, allowing shopping workflows to remain
+        stable once a household begins preparing or purchasing items.
+    </p>
+
+    <p>
+        Planning and shopping are directly connected. Users can generate grocery lists from upcoming meals and select
+        specific days or meals during generation. Plantree automatically detects meals that are already covered by
+        active lists or contain no ingredients.
+    </p>
+
+    <p>
+        Multiple entry points are supported throughout the flow. Lists can be created manually, generated from planned
+        meals, reused from previous shopping sessions, and later adjusted with additional products or manual entries.
+    </p>
+
+    <p>
+        Generated lists still behave like regular editable lists. Users can manually add products, edit quantities,
+        check off purchased items, remove entries, and continue adjusting the list at any time.
+    </p>
+
+    <p>
+        Plantree also supports ingredient normalization through customizable rules. Singular and plural ingredient names
+        can be matched automatically, while measurement conversion rules allow recipe measurements such as cups,
+        tablespoons, and teaspoons to be converted into normalized grocery quantities.
+    </p>
+
+    <p>
+        These remembered rules are automatically reused during future grocery generation. Compatible measurements are
+        merged and summed together, reducing duplicate entries and producing cleaner shopping lists.
+    </p>
+
+    <p>
+        Recipe measurements and pantry inventory are intentionally treated as separate stages. Grocery lists normalize
+        recipe language for shopping, while Pantry storage reflects what households actually purchased. During the
+        Pantry transfer flow, users can adjust quantities, convert units, skip products, or store products using the
+        quantities and package sizes that were actually purchased.
+    </p>
+
+    <p>
+        Lists support lightweight household coordination through real-time updates. Household members can immediately
+        see changes, including who added or bought each list item, helping shopping stay synchronized across devices.
+    </p>
+
+    <p>
+        Active, completed, and archived list states help households organize shopping over time. Lists can also be
+        pinned to keep important shopping workflows easily accessible.
+    </p>
+
+    <div class="lists-images">
+        <img src="assets/images/lists-generate-selection.png" alt="Meal selection while generating a grocery list" />
+
+        <img src="assets/images/lists-overview.png"
+            alt="Grocery lists overview with active, pinned, and archived lists" />
+
+        <img src="assets/images/list-details.png" alt="Editable grocery list details with shopping progress" />
+
+        <img src="assets/images/list-merge-rules.png"
+            alt="Ingredient merge suggestions using singular and plural matching" />
+
+        <img src="assets/images/list-move-to-pantry.png"
+            alt="Moving bought products into Pantry with quantity adjustments" />
+
+        <img src="assets/images/ingredient-rules.png"
+            alt="Ingredient rules management for name and measurement normalization" />
+    </div>
+
+    <ul class="lists-points">
+        <li>
+            <strong>Manual and generated workflows</strong><br />
+            Lists can be created manually or generated directly from planned meals.
+        </li>
+
+        <li>
+            <strong>Snapshot-based generation</strong><br />
+            Generated lists remain stable even if future meal plans later change.
+        </li>
+
+        <li>
+            <strong>Editable generated lists</strong><br />
+            Generated lists remain fully editable after creation.
+        </li>
+
+        <li>
+            <strong>Ingredient normalization</strong><br />
+            Singular/plural matching and measurement conversion rules reduce duplicate entries.
+        </li>
+
+        <li>
+            <strong>Persistent learning system</strong><br />
+            Remembered rules are automatically reused during future grocery generation.
+        </li>
+
+        <li>
+            <strong>Real-time collaboration</strong><br />
+            Changes appear instantly across household members and devices.
+        </li>
+
+        <li>
+            <strong>Pantry integration</strong><br />
+            Bought products can be reviewed, adjusted, and transferred into Pantry inventory.
+        </li>
+
+        <li>
+            <strong>Flexible organization</strong><br />
+            Lists support active, completed, archived, reused, and pinned states.
+        </li>
+    </ul>
 </section>
 
 <section id="pantry" class="project-section">
     <h2>Pantry</h2>
-    <p>Pantry content goes here.</p>
+
+    <p>
+        Pantry in Plantree is designed as a flexible household inventory system that keeps track of products available
+        at home while staying connected to shopping, planning, and cooking workflows.
+    </p>
+
+    <p>
+        Products can be added manually or moved directly from grocery lists after shopping, allowing Pantry to reflect
+        real household purchases and stock over time.
+    </p>
+
+    <p>
+        The system supports both countable and measured products. Countable entries track product counts with optional
+        size information, while measured entries support weight and volume-based quantities using standardized units
+        such
+        as g, kg, ml, and l.
+    </p>
+
+    <p>
+        Pantry management is intentionally flexible. Users can track quantities, optionally add package sizes, attach
+        expiry dates, and organize products in ways that reflect real household shopping habits.
+    </p>
+
+    <p>
+        Pantry items can also be moved directly from grocery lists after shopping. During the move flow, users can
+        review products, adjust quantities or package sizes, skip individual items, and decide how products should be
+        stored before saving them to Pantry.
+    </p>
+
+    <p>
+        Ingredient matching is powered by a normalization and rule-based system shared across Pantry, Lists, and Cook
+        From Pantry. Singular and plural forms can be remembered automatically, while compatible measurement units are
+        normalized and converted when possible.
+    </p>
+
+    <p>
+        This allows recipe ingredients and shopping list entries to map more reliably to structured Pantry products,
+        helping the system interpret real household inventory more accurately over time.
+    </p>
+
+    <p>
+        Pantry also powers the Cook From Pantry system, where meals are matched against available products and ranked
+        based on ingredient availability and quantity sufficiency.
+    </p>
+
+    <p>
+        Matching remains intentionally forgiving. The system supports normalized names, remembered singular/plural
+        rules, compatible unit conversion, and quantity-aware validation to surface meals that are realistically
+        possible with the products currently available at home.
+    </p>
+
+    <p>
+        Users can inspect ingredient matches, review missing products, and immediately add suggested meals back into
+        the planning flow for single or multiple days.
+    </p>
+
+    <p>
+        Cook From Pantry is accessible directly from Pantry, from the Home dashboard, and through secondary navigation,
+        keeping Pantry-aware meal suggestions integrated into the broader planning workflow.
+    </p>
+
+    <div class="pantry-images">
+        <img src="assets/images/pantry-overview.png" alt="Pantry overview with quantities and expiry tracking" />
+
+        <img src="assets/images/pantry-always-present.png" alt="Always-present pantry products" />
+
+        <img src="assets/images/pantry-add-item-countable.png" alt="Adding a countable pantry item" />
+
+        <img src="assets/images/pantry-add-item-measured.png" alt="Adding a measured pantry item" />
+
+        <img src="assets/images/pantry-cleanup-sheet.png" alt="Pantry cleanup actions" />
+
+        <img src="assets/images/pantry-merge-rule-sheet.png" alt="Ingredient merge recognition during pantry entry" />
+
+        <img src="assets/images/cook-from-pantry-overview.png" alt="Cook From Pantry meal suggestions" />
+
+        <img src="assets/images/cook-from-pantry-details.png" alt="Ingredient availability and missing products" />
+
+        <img src="assets/images/cook-from-pantry-add-to-plan.png" alt="Adding pantry-based meals back into planning" />
+
+        <img src="assets/images/cook-from-pantry-multi-day.png" alt="Multi-day planning from Cook From Pantry" />
+
+        <img src="assets/images/move-to-pantry-review.png"
+            alt="Reviewing grocery list products before moving to Pantry" />
+
+        <img src="assets/images/move-to-pantry-adjustment.png"
+            alt="Adjusting quantities and package sizes before moving to Pantry" />
+    </div>
+
+    <ul class="pantry-points">
+        <li>
+            <strong>Flexible household inventory</strong><br />
+            Pantry tracks real household products and quantities while staying connected to planning and shopping flows.
+        </li>
+
+        <li>
+            <strong>Countable and measured products</strong><br />
+            Supports countable products with optional size information alongside standardized measured quantities.
+        </li>
+
+        <li>
+            <strong>Expiry and cleanup management</strong><br />
+            Products can include expiry dates and can later be filtered or cleaned using dedicated cleanup flows.
+        </li>
+
+        <li>
+            <strong>Always-present products</strong><br />
+            Common household staples such as salt, spices, or oil can be excluded from shopping generation while still
+            participating in Pantry matching.
+        </li>
+
+        <li>
+            <strong>Shared ingredient intelligence</strong><br />
+            Pantry reuses the same normalization, singular/plural recognition, and measurement conversion systems used
+            across grocery lists and recipe matching.
+        </li>
+
+        <li>
+            <strong>Cook From Pantry suggestions</strong><br />
+            Meals are ranked using ingredient availability and quantity-aware matching to help households identify meals
+            that
+            best fit their current Pantry contents.
+        </li>
+
+        <li>
+            <strong>Integrated planning workflow</strong><br />
+            Pantry-based meal suggestions can immediately be added back into the weekly planning flow for one or
+            multiple days.
+        </li>
+    </ul>
 </section>
 
 <section id="insights" class="project-section">
