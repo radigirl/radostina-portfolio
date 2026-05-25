@@ -1,1 +1,261 @@
-<p>pengphin-detail works!</p>
+<div class="project-top">
+    <a class="back-link" routerLink="/">← Home</a>
+
+    <section class="project-hero">
+        <h1 class="project-title">PengPhin Adventures</h1>
+
+        <p class="project-subtitle">
+            A playful Angular memory game designed for children, combining themed worlds,
+            progression systems, responsive gameplay, and character-driven interaction.
+        </p>
+    </section>
+
+    <nav class="project-tabs">
+        <button type="button" (click)="scrollToSection('overview')">Overview</button>
+        <button type="button" (click)="scrollToSection('gameplay')">Gameplay</button>
+        <button type="button" (click)="scrollToSection('worlds')">Worlds</button>
+        <button type="button" (click)="scrollToSection('mechanics')">Mechanics</button>
+        <button type="button" (click)="scrollToSection('design')">Design</button>
+        <button type="button" (click)="scrollToSection('tech')">Tech</button>
+    </nav>
+</div>
+
+<section id="overview" class="project-section">
+    <h2>Overview</h2>
+
+    <p>
+        PengPhin Adventures is a memory game created as both a playful experience for children
+        and a frontend-focused Angular project exploring responsive gameplay, progression systems,
+        and interactive UI design.
+    </p>
+
+    <p>
+        The project started as a way to build something meaningful and fun, then evolved into
+        a larger product-style experience with themed worlds, progression systems, mascots,
+        rewards, and responsive gameplay.
+    </p>
+
+    <p>
+        Players join two mascots — Peng the penguin and Phin the dolphin — as they move through
+        different worlds, unlock new levels, and discover playful mechanics along the way.
+    </p>
+
+    <div class="overview-images">
+        <img src="assets/images/pengphin/pengphin-home.png" alt="PengPhin game home screen" />
+        <img src="assets/images/pengphin/pengphin-game.png" alt="PengPhin memory game board" />
+    </div>
+</section>
+
+<section id="gameplay" class="project-section">
+    <h2>Gameplay</h2>
+
+    <p>
+        The gameplay is based on classic memory matching: players flip cards, discover pairs,
+        and clear the board while progressing through increasingly playful worlds and mechanics.
+    </p>
+
+    <p>
+        While the interaction remains simple and accessible, surrounding systems such as coins,
+        hints, rewards, mascot reactions, and special cards make the experience feel more lively
+        and rewarding.
+    </p>
+
+    <p>
+        The game was continuously refined around gameplay clarity, pacing, interaction feedback,
+        and board complexity across different screen sizes and difficulty levels.
+    </p>
+
+    <div class="gameplay-images">
+        <img src="assets/images/pengphin/gameplay-board.png" alt="Memory card board during gameplay" />
+        <img src="assets/images/pengphin/gameplay-win.png" alt="Completed PengPhin round with reward feedback" />
+    </div>
+
+    <ul class="project-points">
+        <li>
+            <strong>Accessible gameplay loop</strong><br />
+            Simple matching interactions designed to feel intuitive and easy to understand.
+        </li>
+
+        <li>
+            <strong>Reward-focused feedback</strong><br />
+            Coins, reactions, and progression systems help each round feel satisfying and engaging.
+        </li>
+
+        <li>
+            <strong>Balanced challenge</strong><br />
+            Hint systems and progressive mechanics help maintain accessibility without removing challenge.
+        </li>
+    </ul>
+</section>
+
+<section id="worlds" class="project-section">
+    <h2>Worlds</h2>
+
+    <p>
+        PengPhin Adventures is organized around themed worlds that create a sense of progression
+        and exploration beyond a traditional memory game.
+    </p>
+
+    <p>
+        Each world introduces its own atmosphere, visual identity, and gameplay mood while keeping
+        the core interaction familiar and easy to understand.
+    </p>
+
+    <p>
+        The structure includes playful environments such as Ocean, Farm, Jungle, Arctic,
+        Dinosaur, and Space, helping progression feel like a continuous adventure.
+    </p>
+
+    <div class="worlds-images">
+        <img src="assets/images/pengphin/worlds-map.png" alt="PengPhin themed worlds selection" />
+        <img src="assets/images/pengphin/world-unlocked.png" alt="Unlocked PengPhin world progression" />
+    </div>
+
+    <ul class="project-points">
+        <li>
+            <strong>Themed progression</strong><br />
+            Worlds help transform simple memory gameplay into a broader adventure structure.
+        </li>
+
+        <li>
+            <strong>Global level system</strong><br />
+            Progression continues across worlds instead of resetting between themes.
+        </li>
+
+        <li>
+            <strong>Visual variety</strong><br />
+            Backgrounds, board styling, and colors evolve between worlds.
+        </li>
+    </ul>
+</section>
+
+<section id="mechanics" class="project-section">
+    <h2>Mechanics</h2>
+
+    <p>
+        Beyond traditional matching mechanics, the game introduces systems designed to create
+        surprise, replay value, and personality.
+    </p>
+
+    <p>
+        Bonus cards reward players with extra coins, while Mischief cards introduce playful
+        disruption by moving hidden cards or changing board expectations during gameplay.
+    </p>
+
+    <p>
+        These mechanics were intentionally designed to stay understandable while still adding
+        enough variation to keep repeated rounds engaging.
+    </p>
+
+    <div class="mechanics-images">
+        <img src="assets/images/pengphin/special-card.png" alt="Special card mechanic in PengPhin" />
+        <img src="assets/images/pengphin/hint-system.png" alt="Hint system during gameplay" />
+    </div>
+
+    <ul class="project-points">
+        <li>
+            <strong>Bonus & Mischief cards</strong><br />
+            Special cards add playful unpredictability and reward moments.
+        </li>
+
+        <li>
+            <strong>Hint system</strong><br />
+            Optional assistance helps players continue without frustration.
+        </li>
+
+        <li>
+            <strong>Mascot interaction</strong><br />
+            Peng and Phin provide visual feedback and emotional engagement during gameplay.
+        </li>
+    </ul>
+</section>
+
+<section id="design" class="project-section">
+    <h2>Design</h2>
+
+    <p>
+        The visual direction focuses on soft shapes, playful colors, and a welcoming atmosphere
+        designed to feel friendly and approachable.
+    </p>
+
+    <p>
+        Special attention was given to responsive behavior. The game board adapts across mobile,
+        tablet, and desktop while balancing card sizing, spacing, and gameplay clarity.
+    </p>
+
+    <p>
+        Character placement, UI layering, and board scaling were carefully adjusted to preserve
+        personality without overwhelming the gameplay area.
+    </p>
+
+    <div class="design-images">
+        <img class="shot-mobile" src="assets/images/pengphin/design-mobile.png" alt="PengPhin mobile layout" />
+
+        <img class="shot-tablet" src="assets/images/pengphin/design-tablet.png" alt="PengPhin tablet layout" />
+
+        <img class="shot-desktop" src="assets/images/pengphin/design-desktop.png" alt="PengPhin desktop layout" />
+    </div>
+
+    <ul class="project-points">
+        <li>
+            <strong>Playful visual identity</strong><br />
+            Mascots, themed worlds, and soft shapes give the game personality.
+        </li>
+
+        <li>
+            <strong>Responsive gameplay layout</strong><br />
+            Boards and controls adapt fluidly across devices and orientations.
+        </li>
+
+        <li>
+            <strong>Clear interaction hierarchy</strong><br />
+            Gameplay remains understandable even as mechanics and progression expand.
+        </li>
+    </ul>
+</section>
+
+<section id="tech" class="project-section">
+    <h2>Tech</h2>
+
+    <p>
+        PengPhin Adventures was built using Angular, TypeScript, and SCSS with a component-based
+        architecture focused on reusable gameplay systems and responsive UI behavior.
+    </p>
+
+    <p>
+        World progression, special mechanics, card generation, scoring, and unlock logic are
+        handled through structured TypeScript state and configuration-driven game data.
+    </p>
+
+    <p>
+        The project also explores speech-enhanced interaction and multilingual support,
+        including planned English and Bulgarian experiences powered through the Web Speech API.
+    </p>
+
+    <p>
+        The project also explores future-facing interaction ideas including speech feedback and
+        multilingual support through the Web Speech API.
+    </p>
+
+    <ul class="project-points">
+        <li>
+            <strong>Angular architecture</strong><br />
+            Standalone components organize gameplay, worlds, UI systems, and progression flows.
+        </li>
+
+        <li>
+            <strong>Configuration-driven structure</strong><br />
+            Worlds, themes, levels, and mechanics are managed through reusable configuration models.
+        </li>
+
+        <li>
+            <strong>Responsive SCSS system</strong><br />
+            Layouts scale across mobile, tablet, and desktop while preserving gameplay usability.
+        </li>
+
+        <li>
+            <strong>Speech & multilingual direction</strong><br />
+            Future-focused support for voice feedback and bilingual gameplay experiences.
+        </li>
+    </ul>
+</section>

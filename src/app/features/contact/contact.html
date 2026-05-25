@@ -1,1 +1,82 @@
-<p>contact works!</p>
+<section class="contact-page">
+    <div class="contact-page__content">
+        <a class="back-link" routerLink="/">← Home</a>
+
+        <div class="contact-card">
+            <p class="contact-card__eyebrow">Contact</p>
+
+            <h1>Let’s connect</h1>
+
+            <p class="contact-card__intro">
+                Interested in frontend engineering, UI architecture, Angular applications,
+                and product-focused development.
+            </p>
+
+            <div class="contact-actions">
+                <button type="button" (click)="copyEmail()">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                    </svg>
+                    <span>Email</span>
+                </button>
+
+                <a href="https://www.linkedin.com/in/radostina-angelova/" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://github.com/radigirl" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M15 22v-4a4.8 4.8 0 0 0-.09-.83 3.5 3.5 0 0 0-.98-1.79c3.28-.36 6.73-1.61 6.73-7.33A5.72 5.72 0 0 0 19 4.77 5.31 5.31 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-6 0C6.27.65 5.09 1 5.09 1A5.31 5.31 0 0 0 5 4.77a5.72 5.72 0 0 0-1.66 3.95c0 5.68 3.45 6.93 6.73 7.33a3.5 3.5 0 0 0-.98 1.79A4.8 4.8 0 0 0 9 18v4" />
+                        <path d="M9 18c-4.51 2-5-2-7-2" />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+
+                <a href="assets/cv/CV_Radostina_Angelova.pdf" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <path d="M7 10l5 5 5-5" />
+                        <path d="M12 15V3" />
+                    </svg>
+                    <span>Download CV</span>
+                </a>
+            </div>
+            <div class="contact-grid">
+                <article>
+                    <h2>Currently interested in</h2>
+
+                    <div class="contact-tags">
+                        <span>Angular</span>
+                        <span>UI architecture</span>
+                        <span>Design systems</span>
+                        <span>PWAs</span>
+                        <span>AI-assisted products</span>
+                        <span>Product-focused UX</span>
+                    </div>
+                </article>
+
+                <article>
+                    <h2>About working with me</h2>
+
+                    <ul>
+                        <li>Product-minded frontend engineer</li>
+                        <li>Strong UI/UX focus</li>
+                        <li>Comfortable owning features end-to-end</li>
+                        <li>Focused on clarity, structure, and real usability</li>
+                    </ul>
+                </article>
+            </div>
+
+            <p class="contact-card__note">
+                Based in Sofia, Bulgaria · Currently building Plantree
+            </p>
+        </div>
+    </div>
+</section>

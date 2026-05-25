@@ -1,0 +1,136 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/breakpoints' as *;
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.simple-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.22), transparent 30%),
+    $bg-home;
+  color: $color-text;
+  padding: 56px 20px;
+}
+
+.simple-page__content {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 40px;
+  text-decoration: none;
+  color: $color-text;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  color: $color-heading;
+}
+
+.simple-page__card {
+  max-width: 980px;
+  padding: 28px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 24px 70px rgba(96, 66, 48, 0.16);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.simple-page__eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: $color-text;
+}
+
+.simple-page h1 {
+  margin: 0 0 16px;
+  font-family: $font-heading;
+  font-size: 1.95rem;
+  font-weight: 650;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: $color-heading;
+}
+
+.simple-page p {
+  margin: 0;
+  max-width: 46rem;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.certificate-list {
+  margin-top: 28px;
+  display: grid;
+  gap: 16px;
+}
+
+.certificate-card {
+  padding: 20px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.certificate-card__label {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.certificate-card h2 {
+  margin: 0 0 8px;
+  font-family: $font-heading;
+  font-size: 1.25rem;
+  color: rgba(85, 97, 109, 0.92);
+  font-weight: 650;
+}
+
+.certificate-card__link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 14px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(85, 97, 109, 0.82);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.certificate-card__link:hover {
+  color: $color-heading;
+  transform: translateX(2px);
+}
+
+@include tablet-up {
+  .simple-page {
+    padding: 72px 32px;
+  }
+
+  .simple-page__card {
+    padding: 48px;
+  }
+
+  .simple-page h1 {
+     font-size: 2.45rem;
+  }
+
+  .certificate-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

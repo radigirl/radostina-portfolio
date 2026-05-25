@@ -1,0 +1,171 @@
+@use '../variables' as *;
+@use '../breakpoints' as *;
+
+.project-top {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  padding-top: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 20px;
+  width: fit-content;
+  text-decoration: none;
+  color: $color-text;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-link:hover {
+  color: $color-heading;
+  transform: translateX(-1px);
+}
+
+.project-hero {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 16px 20px 16px;
+}
+
+.project-title {
+  margin: 0 0 12px;
+  font-family: $font-heading;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.project-subtitle {
+  margin: 0;
+  max-width: 48rem;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.project-tabs {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  padding: 14px 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.project-tabs button {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-tabs button:hover {
+  transform: translateY(-1px);
+}
+
+.project-section {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 48px 20px;
+  scroll-margin-top: 220px;
+}
+
+.project-section p {
+  margin: 0;
+  max-width: 48rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.project-section p + p {
+  margin-top: 16px;
+}
+
+.project-section:last-of-type {
+  padding-bottom: 80px;
+}
+
+.project-section h2 {
+  margin: 0 0 12px;
+  font-family: $font-heading;
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+
+@include tablet-up {
+  .back-link {
+    margin: 0 24px;
+    font-size: 1rem;
+  }
+
+  .project-hero {
+    padding: 32px 24px 24px;
+  }
+
+  .project-title {
+    font-size: 2.1rem;
+  }
+
+  .project-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .project-tabs {
+    padding: 16px 24px;
+  }
+
+  .project-section {
+    padding: 56px 24px;
+  }
+
+  .project-section h2 {
+    font-size: 1.9rem;
+  }
+}
+
+@include desktop-up {
+  .back-link {
+    width: min(100%, 1100px);
+    display: flex;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .project-hero {
+    padding: 18px 24px 18px;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-tabs {
+    overflow-x: visible;
+  }
+}

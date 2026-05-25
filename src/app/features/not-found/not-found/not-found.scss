@@ -1,0 +1,100 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/breakpoints' as *;
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.not-found-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.22), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.14), transparent 34%),
+    linear-gradient(180deg, #eea07f 0%, #f3c1a8 52%, #f6ddd0 100%);
+
+  color: $color-text;
+}
+
+.not-found-card {
+  width: min(100%, 620px);
+  padding: 32px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.46);
+  border: 1px solid rgba(92, 143, 134, 0.18);
+  box-shadow: 0 24px 70px rgba(72, 104, 95, 0.16);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.not-found-card__eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba($color-text, 0.72);
+}
+
+.not-found-card h1 {
+  margin: 0 0 14px;
+  font-family: $font-heading;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: $color-heading;
+}
+
+.not-found-card p {
+  margin: 0;
+  max-width: 34rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba($color-text, 0.82);
+}
+
+.not-found-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $color-heading;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(92, 143, 134, 0.2);
+  box-shadow: 0 14px 34px rgba(72, 104, 95, 0.12);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.not-found-card__button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 18px 42px rgba(72, 104, 95, 0.16);
+}
+
+@include tablet-up {
+  .not-found-page {
+    padding: 48px 32px;
+  }
+
+  .not-found-card {
+    padding: 44px;
+  }
+
+  .not-found-card h1 {
+    font-size: 2.4rem;
+  }
+}

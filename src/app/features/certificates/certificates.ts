@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-certificates',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './certificates.html',
   styleUrl: './certificates.scss',
 })

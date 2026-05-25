@@ -1,0 +1,207 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/breakpoints' as *;
+
+:host {
+    display: block;
+    min-height: 100vh;
+}
+
+.contact-page {
+    min-height: 100vh;
+    padding: 56px 20px;
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.22), transparent 30%),
+        $bg-home;
+    color: $color-text;
+}
+
+.contact-page__content {
+    width: min(100%, 920px);
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-flex;
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: $color-text;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    color: $color-heading;
+}
+
+.contact-card {
+    padding: 40px;
+    border-radius: 32px;
+    background: rgba(255, 248, 244, 0.58);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    box-shadow: 0 24px 70px rgba(96, 66, 48, 0.16);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.contact-card__eyebrow {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: rgba($color-text, 0.76);
+}
+
+.contact-card h1 {
+    margin: 0 0 16px;
+    font-family: $font-heading;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: $color-heading;
+}
+
+.contact-card__intro {
+    margin: 0;
+    max-width: 46rem;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba($color-text, 0.84);
+}
+
+.contact-actions {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contact-actions a,
+.contact-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: rgba($color-heading, 0.9);
+    background: rgba(255, 255, 255, 0.62);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.contact-actions span {
+    line-height: 1;
+}
+
+.contact-actions a,
+.contact-actions button {
+    gap: 8px;
+}
+
+.contact-actions svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  position: relative;
+  top: -1px;
+  flex-shrink: 0;
+}
+
+.contact-actions button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.contact-actions a:hover,
+.contact-actions button:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+    box-shadow: 0 14px 34px rgba(96, 66, 48, 0.12);
+}
+
+.contact-grid {
+    margin-top: 32px;
+    display: grid;
+    gap: 16px;
+}
+
+.contact-grid article {
+    padding: 22px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.44);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+}
+
+.contact-grid h2 {
+    margin: 0 0 16px;
+    font-family: $font-heading;
+    font-size: 1.15rem;
+    font-weight: 650;
+    color: rgba($color-heading, 0.92);
+}
+
+.contact-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: rgba($color-text, 0.82);
+}
+
+.contact-grid ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.contact-grid li {
+    line-height: 1.7;
+    color: rgba($color-text, 0.84);
+}
+
+.contact-card__note {
+    margin: 24px 0 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba($color-text, 0.74);
+}
+
+@include tablet-up {
+    .contact-page {
+        padding: 72px 32px;
+    }
+
+    .contact-card {
+        padding: 42px 48px;
+    }
+
+    .contact-card h1 {
+        font-size: 2.45rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
