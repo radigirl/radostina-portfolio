@@ -77,8 +77,7 @@
     gap: 12px;
 }
 
-.contact-actions a,
-.contact-actions button {
+.contact-actions a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -101,9 +100,8 @@
     line-height: 1;
 }
 
-.contact-actions a,
-.contact-actions button {
-    gap: 8px;
+.contact-actions a {
+  gap: 8px;
 }
 
 .contact-actions svg {
@@ -119,13 +117,8 @@
   flex-shrink: 0;
 }
 
-.contact-actions button {
-    cursor: pointer;
-    font-family: inherit;
-}
 
-.contact-actions a:hover,
-.contact-actions button:hover {
+.contact-actions a:hover {
     background: rgba(255, 255, 255, 0.9);
     transform: translateY(-1px);
     box-shadow: 0 14px 34px rgba(96, 66, 48, 0.12);

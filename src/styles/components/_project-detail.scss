@@ -5,7 +5,7 @@
   position: sticky;
   top: 0;
   z-index: 30;
-  padding-top: 24px;
+  padding-top: 10px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -13,14 +13,13 @@
 .back-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin: 0 20px;
-  width: fit-content;
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 0 18px;
   text-decoration: none;
   color: $color-text;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .back-link:hover {
@@ -31,31 +30,31 @@
 .project-hero {
   width: min(100%, 1100px);
   margin: 0 auto;
-  padding: 16px 20px 16px;
+  padding: 6px 18px 10px;
 }
 
 .project-title {
-  margin: 0 0 12px;
+  margin: 0 0 6px;
   font-family: $font-heading;
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  font-size: 1.45rem;
+  font-weight: 650;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
 }
 
 .project-subtitle {
   margin: 0;
-  max-width: 48rem;
-  font-size: 1rem;
-  line-height: 1.75;
+  max-width: 42rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 .project-tabs {
   width: min(100%, 1100px);
   margin: 0 auto;
   display: flex;
-  gap: 10px;
-  padding: 14px 20px;
+  gap: 8px;
+  padding: 8px 18px 10px;
   overflow-x: auto;
   overflow-y: hidden;
   flex-wrap: nowrap;
@@ -73,11 +72,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 38px;
-  padding: 0 14px;
+  min-height: 34px;
+  padding: 0 13px;
   border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 650;
   cursor: pointer;
   transition:
     background-color 0.2s ease,
@@ -92,44 +91,88 @@
 .project-section {
   width: min(100%, 1100px);
   margin: 0 auto;
-  padding: 24px 20px;
-  scroll-margin-top: 220px;
+  padding: 24px 18px;
+  scroll-margin-top: 150px;
+}
+
+.project-section h2 {
+  margin: 0 0 10px;
+  font-family: $font-heading;
+  font-size: 1.35rem;
+  line-height: 1.12;
 }
 
 .project-section p {
   margin: 0;
-  max-width: 48rem;
-  font-size: 1rem;
-  line-height: 1.8;
+  max-width: 44rem;
+  font-size: 0.92rem;
+  line-height: 1.58;
 }
 
-.project-section p+p {
-  margin-top: 16px;
+.project-section p + p {
+  margin-top: 12px;
 }
 
 .project-section:last-of-type {
-  padding-bottom: 80px;
+  padding-bottom: 48px;
 }
 
-.project-section h2 {
-  margin: 0 0 12px;
-  font-family: $font-heading;
-  font-size: 1.7rem;
-  line-height: 1.1;
-}
-
-@include mobile {
+@include tablet-up {
   .project-top {
-    padding-top: 10px;
+    padding-top: 12px;
+  }
+
+  .back-link {
+    padding: 0 24px;
+    font-size: 0.88rem;
   }
 
   .project-hero {
-    padding-top: 8px;
-    padding-bottom: 12px;
+    padding: 8px 24px 12px;
   }
 
   .project-title {
-    margin-bottom: 10px;
+    font-size: 1.65rem;
+  }
+
+  .project-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .project-tabs {
+    gap: 9px;
+    padding: 9px 24px 12px;
+  }
+
+  .project-tabs button {
+    min-height: 35px;
+    padding: 0 14px;
+    font-size: 0.82rem;
+  }
+
+  .project-section {
+    padding: 30px 24px;
+  }
+
+  .project-section h2 {
+    margin-bottom: 12px;
+    font-size: 1.55rem;
+  }
+
+  .project-section p {
+    font-size: 0.96rem;
+    line-height: 1.62;
+  }
+}
+
+@include desktop-up {
+  .project-top {
+    padding-top: 14px;
+  }
+
+  .project-title {
+    font-size: 1.8rem;
   }
 
   .project-subtitle {
@@ -138,64 +181,19 @@
   }
 
   .project-tabs {
-    padding-top: 10px;
-    padding-bottom: 12px;
-  }
-}
-
-@include tablet-up {
-  .back-link {
-    margin: 0 24px;
-    font-size: 1rem;
-  }
-
-  .project-hero {
-    padding: 20px 24px 16px;
-  }
-
-  .project-title {
-    font-size: 2.1rem;
-  }
-
-  .project-subtitle {
-    font-size: 1.05rem;
-  }
-
-  .project-tabs {
-    padding: 16px 24px;
-  }
-
-  .project-section {
-    padding: 32px 24px;
-  }
-
-  .project-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 16px;
-  }
-}
-
-@include desktop-up {
-  .back-link {
-    width: min(100%, 1100px);
-    display: flex;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  .project-hero {
-    padding: 18px 24px 18px;
-  }
-
-  .project-title {
-    font-size: 2rem;
-  }
-
-  .project-tabs {
     overflow-x: visible;
   }
 
-   .project-section {
-    padding: 40px 32px;
+  .project-section {
+    padding: 36px 24px;
+  }
+
+  .project-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .project-section p {
+    font-size: 1rem;
+    line-height: 1.68;
   }
 }
