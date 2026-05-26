@@ -92,7 +92,7 @@
 .project-section {
   width: min(100%, 1100px);
   margin: 0 auto;
-  padding: 48px 20px;
+  padding: 24px 20px;
   scroll-margin-top: 220px;
 }
 
@@ -103,7 +103,7 @@
   line-height: 1.8;
 }
 
-.project-section p + p {
+.project-section p+p {
   margin-top: 16px;
 }
 
@@ -118,6 +118,31 @@
   line-height: 1.1;
 }
 
+@include mobile {
+  .project-top {
+    padding-top: 10px;
+  }
+
+  .project-hero {
+    padding-top: 8px;
+    padding-bottom: 12px;
+  }
+
+  .project-title {
+    margin-bottom: 10px;
+  }
+
+  .project-subtitle {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .project-tabs {
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+}
+
 @include tablet-up {
   .back-link {
     margin: 0 24px;
@@ -125,7 +150,7 @@
   }
 
   .project-hero {
-    padding: 32px 24px 24px;
+    padding: 20px 24px 16px;
   }
 
   .project-title {
@@ -141,11 +166,12 @@
   }
 
   .project-section {
-    padding: 56px 24px;
+    padding: 32px 24px;
   }
 
   .project-section h2 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
   }
 }
 
@@ -167,5 +193,9 @@
 
   .project-tabs {
     overflow-x: visible;
+  }
+
+   .project-section {
+    padding: 40px 32px;
   }
 }
