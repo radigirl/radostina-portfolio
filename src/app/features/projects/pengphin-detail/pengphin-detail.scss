@@ -86,6 +86,14 @@
   background: rgba(255, 255, 255, 0.62);
 }
 
+.overview-images img,
+.gameplay-images img,
+.worlds-images img,
+.mechanics-images img,
+.design-images img {
+  box-shadow: 0 14px 34px rgba(41, 85, 122, 0.12);
+}
+
 .design-images {
   margin: 22px auto 24px;
   display: grid;
@@ -99,7 +107,47 @@
   background: rgba(255, 255, 255, 0.62);
 }
 
+.project-links {
+  margin-top: 20px;
+}
+
+.project-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg,
+      #71a8db 0%,
+      #4d84c4 100%);
+
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 10px 24px rgba(113, 168, 219, 0.28);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.project-link-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(113, 168, 219, 0.4);
+  color: white;
+}
+
+.project-link-button:visited {
+  color: white;
+}
+
+.mechanics-images img {
+  max-width: 220px;
+}
+
 @include tablet-up {
+
   .overview-images,
   .gameplay-images,
   .worlds-images,
@@ -123,13 +171,21 @@
 }
 
 @include desktop-up {
+
   .overview-images,
   .gameplay-images,
   .worlds-images,
   .mechanics-images {
-    max-width: 760px;
+    max-width: 860px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .overview-images img,
+  .gameplay-images img,
+  .worlds-images img,
+  .mechanics-images img {
+    max-width: 400px;
   }
 
   .design-images {
@@ -147,5 +203,9 @@
 
   .design-images .shot-desktop {
     grid-column: span 12;
+  }
+
+  .mechanics-images img {
+    max-width: 260px;
   }
 }
