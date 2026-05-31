@@ -5,13 +5,13 @@ import { Contact } from './features/contact/contact';
 import { NotFound } from './features/not-found/not-found/not-found';
 import { PlantreeDetail } from './features/projects/plantree-detail/plantree-detail';
 import { PengphinDetail } from './features/projects/pengphin-detail/pengphin-detail';
-import { GarminDetail } from './features/projects/garmin-detail/garmin-detail';
+import { PeacelyDetail } from './features/projects/peacely-detail/peacely-detail';
 
 export const routes: Routes = [
   { path: '', component: Home },
   { path: 'projects/plantree', component: PlantreeDetail },
   { path: 'projects/pengphin', component: PengphinDetail },
-  { path: 'projects/garmin', component: GarminDetail },
+  { path: 'projects/garmin', component: PeacelyDetail },
   { path: 'certificates', component: Certificates },
   { path: 'contact', component: Contact },
   { path: '**', component: NotFound }

@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GarminDetail } from './garmin-detail';
+import { PeacelyDetail } from './peacely-detail';
 
-describe('GarminDetail', () => {
-  let component: GarminDetail;
-  let fixture: ComponentFixture<GarminDetail>;
+describe('PeacelyDetail', () => {
+  let component: PeacelyDetail;
+  let fixture: ComponentFixture<PeacelyDetail>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GarminDetail],
+      imports: [PeacelyDetail],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(GarminDetail);
+    fixture = TestBed.createComponent(PeacelyDetail);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

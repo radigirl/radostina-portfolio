@@ -1,0 +1,265 @@
+<div class="project-top">
+    <a class="back-link" routerLink="/">← Home</a>
+
+    <section class="project-hero">
+        <h1 class="project-title">Peacely</h1>
+
+        <p class="project-subtitle">
+            A minimal Garmin watch face concept designed for clarity, calm visuals, quick glances,
+            and everyday wearable use.
+        </p>
+    </section>
+
+    <nav class="project-tabs">
+        <button type="button" (click)="scrollToSection('overview')">Overview</button>
+        <button type="button" (click)="scrollToSection('system')">System</button>
+        <button type="button" (click)="scrollToSection('themes')">Themes</button>
+        <button type="button" (click)="scrollToSection('design')">Design</button>
+        <button type="button" (click)="scrollToSection('features')">Features</button>
+        <button type="button" (click)="scrollToSection('tech')">Tech</button>
+        <button type="button" (click)="scrollToSection('future')">Future</button>
+    </nav>
+</div>
+
+<section id="overview" class="project-section">
+    <h2>Overview</h2>
+
+    <p>
+        Peacely is a minimal watch face concept for wearable devices, focused on making essential
+        information easy to read at a glance without overwhelming the screen.
+    </p>
+
+    <p>
+        The project explores how a small interface can feel calm, polished, and useful while still
+        supporting everyday activity. Instead of filling the screen with many metrics, Peacely gives
+        priority to time, date, battery, and steps.
+    </p>
+
+    <p>
+        The visual direction is built around soft color themes, subtle botanical details, and a fixed
+        information structure that stays familiar across different moods and contexts.
+    </p>
+
+    <div class="overview-images">
+        <img src="assets/images/peacely/peacely-sage.png" alt="Peacely sage theme watch face" />
+        <img src="assets/images/peacely/peacely-warm.png" alt="Peacely warm theme watch face" />
+    </div>
+</section>
+
+<section id="system" class="project-section">
+    <h2>System</h2>
+
+    <p>
+        Peacely uses a consistent vertical information structure across all themes. This keeps the
+        interface predictable, so users can switch visual styles without relearning where information lives.
+    </p>
+
+    <p>
+        Time remains the primary focal point, while battery, date, and steps are treated as supporting
+        information. Decorative elements are placed around the edge of the display so they add identity
+        without competing with readability.
+    </p>
+
+    <ul class="project-points">
+        <li>
+            <strong>Clear hierarchy</strong><br />
+            Time is visually dominant, while secondary data remains useful but quiet.
+        </li>
+
+        <li>
+            <strong>Consistent placement</strong><br />
+            The same layout works across all themes to preserve familiarity.
+        </li>
+
+        <li>
+            <strong>Round-screen awareness</strong><br />
+            Content stays centered and avoids the edges where circular screens reduce available space.
+        </li>
+
+        <li>
+            <strong>Reduced visual noise</strong><br />
+            The design avoids unnecessary metrics and keeps the watch face glanceable.
+        </li>
+    </ul>
+</section>
+
+<section id="themes" class="project-section">
+    <h2>Themes</h2>
+
+    <p>
+        The theme system keeps the same layout and information hierarchy while changing the emotional
+        tone of the watch face.
+    </p>
+
+    <p>
+        Each theme is designed for a different visual context: soft everyday use, warmer lifestyle use,
+        and a darker low-distraction mode.
+    </p>
+
+    <div class="themes-grid">
+        <article class="theme-card">
+            <img src="assets/images/peacely/peacely-sage.png" alt="Sage Peacely watch face theme" />
+            <h3>Sage</h3>
+            <p>A soft green theme inspired by calm, nature, and everyday readability.</p>
+        </article>
+
+        <article class="theme-card">
+            <img src="assets/images/peacely/peacely-warm.png" alt="Warm Peacely watch face theme" />
+            <h3>Warm</h3>
+            <p>A warmer beige theme with gentle contrast and a more lifestyle-focused feeling.</p>
+        </article>
+
+        <article class="theme-card">
+            <img src="assets/images/peacely/peacely-dark.png" alt="Dark Peacely watch face theme" />
+            <h3>Dark</h3>
+            <p>A low-distraction theme designed for reduced brightness and visual comfort.</p>
+        </article>
+    </div>
+</section>
+
+<section id="design" class="project-section">
+    <h2>Design</h2>
+
+    <p>
+        The design direction focuses on calm visual rhythm, soft contrast, and quick readability.
+        Botanical details create personality, but they stay outside the central reading area so the
+        interface remains functional first.
+    </p>
+
+    <p>
+        The layout intentionally avoids dense dashboards. On a wearable screen, the most important
+        action is often a quick glance, so the design prioritizes immediate recognition over showing
+        everything at once.
+    </p>
+
+    <p>
+        The same composition works across the sage, warm, and dark themes, showing how a small UI system
+        can create variation without sacrificing usability.
+    </p>
+
+    <div class="design-images">
+        <img class="shot-theme" src="assets/images/peacely/peacely-sage.png" alt="Peacely sage design mockup" />
+        <img class="shot-theme" src="assets/images/peacely/peacely-warm.png" alt="Peacely warm design mockup" />
+        <img class="shot-theme" src="assets/images/peacely/peacely-dark.png" alt="Peacely dark design mockup" />
+    </div>
+
+    <ul class="project-points">
+        <li>
+            <strong>Minimal information density</strong><br />
+            The screen focuses on the information most likely to be checked throughout the day.
+        </li>
+
+        <li>
+            <strong>Soft visual identity</strong><br />
+            Subtle organic details add character without overwhelming the interface.
+        </li>
+
+        <li>
+            <strong>Readable contrast</strong><br />
+            Text and icons are designed to stay legible while preserving a calm tone.
+        </li>
+
+        <li>
+            <strong>Theme consistency</strong><br />
+            Color and mood change, while structure and usability remain stable.
+        </li>
+    </ul>
+</section>
+
+<section id="features" class="project-section">
+    <h2>Features</h2>
+
+    <p>
+        Peacely is currently planned around a small core feature set that supports everyday use without
+        turning the watch face into a crowded dashboard.
+    </p>
+
+    <ul class="project-points">
+        <li>
+            <strong>Large time display</strong><br />
+            The current time remains the main focus of the interface.
+        </li>
+
+        <li>
+            <strong>Date display</strong><br />
+            Day and date are positioned as secondary information above the time.
+        </li>
+
+        <li>
+            <strong>Battery status</strong><br />
+            Battery percentage is visible at the top without dominating the screen.
+        </li>
+
+        <li>
+            <strong>Step count</strong><br />
+            Activity progress is shown as a subtle bottom metric.
+        </li>
+
+        <li>
+            <strong>Multiple themes</strong><br />
+            Sage, warm, and dark variants allow the same interface to adapt visually.
+        </li>
+    </ul>
+</section>
+
+<section id="tech" class="project-section">
+    <h2>Tech</h2>
+
+    <p>
+        Peacely is planned as a Garmin watch face project. The current stage focuses on visual direction,
+        layout structure, and theme definition before implementation details are finalized.
+    </p>
+
+    <p>
+        The technical implementation will be shaped by Garmin watch face constraints, including screen
+        size, performance, battery usage, supported metrics, and available interaction patterns.
+    </p>
+
+    <ul class="project-points">
+        <li>
+            <strong>Wearable-first layout</strong><br />
+            Designed around circular screens and quick-glance readability.
+        </li>
+
+        <li>
+            <strong>Theme-based structure</strong><br />
+            Planned as a reusable visual system with shared layout and theme-specific colors.
+        </li>
+
+        <li>
+            <strong>Garmin implementation</strong><br />
+            Intended to be built with Garmin Connect IQ tooling after the visual system is finalized.
+        </li>
+    </ul>
+</section>
+
+<section id="future" class="project-section">
+    <h2>Future</h2>
+
+    <p>
+        Future iterations may expand Peacely beyond the first minimal version while keeping the same calm,
+        readable direction.
+    </p>
+
+    <ul class="project-points">
+        <li>
+            <strong>Additional activity metrics</strong><br />
+            Explore optional data such as heart rate, calories, or weather without increasing clutter.
+        </li>
+
+        <li>
+            <strong>Theme switching</strong><br />
+            Consider manual or time-based switching between sage, warm, and dark modes.
+        </li>
+
+        <li>
+            <strong>Customization options</strong><br />
+            Allow users to choose which secondary metric appears at the bottom.
+        </li>
+
+        <li>
+            <strong>Accessibility refinements</strong><br />
+            Improve contrast, sizing, and readability based on real-device testing.
+        </li>
+    </ul>
+</section>
