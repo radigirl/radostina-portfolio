@@ -7,6 +7,12 @@
             A household planning system that connects meals, grocery shopping, pantry management, and cooking into one
             continuous experience.
         </p>
+
+        <div class="project-status">
+            <span><strong>Status:</strong> Active Development</span>
+            <span><strong>Demo & Public Access:</strong> Coming Soon</span>
+        </div>
+        
     </section>
 
     <nav class="project-tabs">
@@ -82,7 +88,7 @@
         These transitions are intentionally designed to feel lightweight and connected,
         instead of behaving like isolated product areas.
     </p>
-    
+
     <p>
         Plantree also uses a shared member and space model. A single account can include multiple members, who can move
         across spaces, while each active space defines what is current and relevant — especially for pantry-based
@@ -172,10 +178,28 @@
     </p>
 
     <p>
+        The meal library provides a central place for managing household recipes.
+        Meals can be searched, edited, and reused throughout planning, grocery lists,
+        and pantry-based cooking suggestions.
+    </p>
+
+    <p>
         Search is available both in the planning flow and within the meal library, allowing users to quickly find meals
         by name or ingredients. Matching is intentionally flexible, so even imperfect queries can still surface
         relevant results.
     </p>
+
+    <p>
+        Users can expand their meal library with curated recipe collections.
+        During import, Plantree allows selecting a recipe language and choosing
+        which recipes to add.
+    </p>
+
+    <div class="planning-images">
+        <img src="assets/images/plantree/my-meals-overview.png" alt="My Meals library" />
+
+        <img src="assets/images/plantree/add-collection-dialog.png" alt="Recipe collection import dialog" />
+    </div>
 
     <p>
         Planning is directly connected to shopping. Meals added to the weekly plan can later be used to generate a
@@ -666,6 +690,13 @@
         Realtime subscriptions keep shared household data synchronized across devices, supporting collaborative
         planning, grocery management, and pantry workflows.
     </p>
+
+    <p>
+        Authentication is handled through Supabase and provides account-based
+        access to personal household data.
+    </p>
+
+    <img class="shot-mobile" src="assets/images/plantree/login-screen.png" alt="Plantree login screen" />
 
     <p>
         Ingredient processing is handled through custom parsing and normalization utilities that support:

@@ -34,6 +34,19 @@
   color: rgba($color-text, 0.84);
 }
 
+.project-status {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+  color: rgba($color-text, 0.85);
+  font-size: 0.95rem;
+}
+
+.project-status strong {
+  color: $color-heading;
+}
+
 .project-tabs button {
   border: 1px solid rgba(108, 122, 137, 0.1);
   background: rgba(255, 255, 255, 0.62);
@@ -146,6 +159,17 @@
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 16px;
+  border: 1px solid rgba(108, 122, 137, 0.1);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+#tech > .shot-mobile {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin: 18px auto 24px;
   border-radius: 16px;
   border: 1px solid rgba(108, 122, 137, 0.1);
   background: rgba(255, 255, 255, 0.58);
