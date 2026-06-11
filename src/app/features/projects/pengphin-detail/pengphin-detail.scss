@@ -4,7 +4,7 @@
 
 :host {
   display: block;
-  min-height: 100vh;
+  min-height: 100svh;
 
   background:
     radial-gradient(circle at top left, rgba(113, 168, 219, 0.16), transparent 32%),
@@ -108,7 +108,7 @@
 }
 
 .project-links {
-  margin-top: 20px;
+  margin-top: 6px;
 }
 
 .project-link-button {
