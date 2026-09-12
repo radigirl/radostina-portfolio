@@ -35,6 +35,12 @@
     </p>
 
     <p>
+        Plantree started from a simple problem at home: the recurring question of what we were going to eat.
+        I built it to make those everyday decisions easier by keeping meal planning, shopping, and what we
+        already have at home connected in one place.
+    </p>
+
+    <p>
         The name Plantree comes from three ideas at the core of the product: <strong>Plan</strong>,
         <strong>Pantry</strong>, and the idea of a growing <strong>Tree</strong> of connected household
         decisions. What starts as a meal plan naturally grows into shopping lists, pantry inventory, and cooking
@@ -105,10 +111,8 @@
     </p>
 
     <p>
-        Currently, collaboration takes place between members within the same household account.
-        Future development includes account-based shared spaces that allow multiple households
-        to collaborate through invitations while keeping their private recipes, pantry inventory,
-        grocery lists, and household data separate unless explicitly shared.
+        Collaboration takes place between members within the same household account, while spaces
+        provide separate contexts for planning, pantry data, grocery lists, and household activity.
     </p>
 
     <p class="system-intro">
@@ -692,20 +696,32 @@
     </p>
 
     <p>
-        The frontend is built with standalone Angular components and SCSS, using a shared design system with reusable
-        layouts, chips, dialogs, cards, bottom sheets, and responsive breakpoints across mobile, tablet, and desktop
-        devices.
+        The frontend is built with Angular, TypeScript, RxJS, and SCSS, using standalone components and a shared design
+        system with reusable layouts, chips, dialogs, cards, bottom sheets, and responsive breakpoints across mobile,
+        tablet, and desktop devices.
     </p>
 
     <p>
-        Supabase powers authentication, realtime synchronization, database storage, and image uploads.
-        Realtime subscriptions keep shared household data synchronized across devices, supporting collaborative
-        planning, grocery management, and pantry workflows.
+        Supabase powers authentication, PostgreSQL data storage, Realtime synchronization, and private file storage.
+        Row Level Security (RLS) keeps application data scoped to the appropriate household account, while private
+        Storage buckets use access policies and signed URLs to protect meal images and member avatars.
     </p>
 
     <p>
-        Authentication is handled through Supabase and provides account-based
-        access to personal household data.
+        Supabase Realtime keeps shared Grocery Lists synchronized across household devices, allowing changes made by
+        one household member to appear for others without manual refresh.
+    </p>
+
+    <p>
+        Authentication is handled through Supabase, with signup, email verification, login, password recovery,
+        and password reset flows. Transactional authentication emails are delivered through Resend using
+        Plantree's custom domain.
+    </p>
+
+    <p>
+        Plantree is deployed through Cloudflare Pages at plantree.io with HTTPS and Progressive Web App support.
+        Deployment is connected to the GitHub repository through a CI/CD workflow, so production updates are built
+        and published from the project source.
     </p>
 
     <img class="shot-mobile" src="assets/images/plantree/login-screen.png" alt="Plantree login screen" />
